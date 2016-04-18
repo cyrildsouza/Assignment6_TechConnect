@@ -1,5 +1,5 @@
 /*
- * Copyright 2016 Len Payne <len.payne@lambtoncollege.ca>.
+ * 
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package todo;
+package Message;
 
 import java.util.Set;
 import javax.faces.bean.ApplicationScoped;
@@ -23,7 +23,7 @@ import javax.ws.rs.core.Application;
  *
  * @author Len Payne <len.payne@lambtoncollege.ca>
  */
-@javax.ws.rs.ApplicationPath("r")
+@javax.ws.rs.ApplicationPath("v1")
 public class ApplicationConfig extends Application {
 
     @Override
@@ -40,7 +40,7 @@ public class ApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(todo.TodoService.class);
+        resources.add(Message.MessageService.class);
     }
     
 }
